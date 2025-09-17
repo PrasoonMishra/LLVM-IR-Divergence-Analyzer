@@ -1,0 +1,37 @@
+{
+  "description": "Default configuration for LLVM IR Divergence Analyzer",
+  "version": "1.0",
+  
+  "normalization": {
+    "ignore_whitespace": true,
+    "ignore_empty_lines": true, 
+    "ignore_temp_vars": true,
+    "ignore_labels": true,
+    "ignore_metadata": true,
+    "ignore_debug_info": true,
+    "ignore_comments": false
+  },
+  
+  "behavior": {
+    "auto_cleanup": false,
+    "verbose": false,
+    "quiet": false,
+    "no_cleanup_prompt": false
+  },
+  
+  "excluded_passes": {
+    "description": "Passes to explicitly skip during mapping (not compared)",
+    "legacy_passes": [
+      "structurizecfg"
+    ],
+    "npm_passes": [
+      "StructurizeCFGPass"
+    ]
+  },
+  
+  "output": {
+    "generate_diff_file": true,
+    "max_diff_lines": 1000,
+    "include_context_lines": 3
+  }
+}

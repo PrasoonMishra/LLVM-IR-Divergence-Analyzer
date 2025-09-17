@@ -1,0 +1,22 @@
+# LLVM IR Divergence Analyzer Requirements
+# 
+# This project uses only Python standard library modules.
+# No external dependencies required.
+#
+# Minimum Python version: 3.7+
+#
+# Core modules used:
+# - argparse (CLI interface)
+# - json (configuration and output)
+# - pathlib (file system operations)
+# - logging (dual logging system)
+# - dataclasses (data structures)
+# - typing (type hints)
+# - re (regular expressions for parsing)
+# - shutil (file operations)
+# - datetime (timestamps)
+
+# For development/testing (optional):
+# pytest>=6.0.0
+# black>=21.0.0 
+# mypy>=0.910
