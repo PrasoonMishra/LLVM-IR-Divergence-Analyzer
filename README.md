@@ -84,41 +84,41 @@ python src/main.py --verbose
 ## Expected Output
 
 ```
-🔍 LLVM IR Divergence Analyzer
+LLVM IR Divergence Analyzer
 ==================================================
-📄 Legacy dump:  /home/prasmish/LLVM-IR-Divergence-Analyzer/data/legacy.full.txt
-📄 NPM dump:     /home/prasmish/LLVM-IR-Divergence-Analyzer/data/npm.full.txt
-🗺️  Pass mapping: /home/prasmish/LLVM-IR-Divergence-Analyzer/data/legacy-to-npm-pass-mapping.json
-📁 Output dir:   output/current
+Legacy dump:  /home/prasmish/LLVM-IR-Divergence-Analyzer/data/legacy.full.txt
+NPM dump:     /home/prasmish/LLVM-IR-Divergence-Analyzer/data/npm.full.txt
+Pass mapping: /home/prasmish/LLVM-IR-Divergence-Analyzer/data/legacy-to-npm-pass-mapping.json
+Output dir:   output/current
 
-🔍 Parsing IR dump files...
+Parsing IR dump files...
    Legacy passes: 171
    NPM passes: 172
-🗺️  Loading pass mappings...
-🔗 Creating chronological pass mapping...
-⚖️  Comparing IR content...
-📊 Generating analysis report...
+Loading pass mappings...
+Creating chronological pass mapping...
+Comparing IR content...
+Generating analysis report...
 
 ============================================================
-🎯 LLVM IR DIVERGENCE ANALYSIS RESULTS
+LLVM IR DIVERGENCE ANALYSIS RESULTS
 ============================================================
-📊 SUMMARY:
+SUMMARY:
    Legacy passes:     171
    NPM passes:        172
    Successfully mapped: 117
    Skipped passes:    51
 
-🎯 FIRST DIVERGENCE FOUND:
+FIRST DIVERGENCE FOUND:
    Position:      Pass pair #66
    Legacy Pass:   "phi-node-elimination" (#104 in legacy pipeline)
    NPM Pass:      "PHIEliminationPass" (#105 in NPM pipeline)
 
-📋 LAST COMMON PASS:
+LAST COMMON PASS:
    Position:      Pass pair #65
    Legacy Pass:   "si-opt-vgpr-liverange" (#103 in legacy pipeline)
    NPM Pass:      "SIOptimizeVGPRLiveRangePass" (#103 in NPM pipeline)
 
-📁 OUTPUT FILES:
+OUTPUT FILES:
    JSON Report:   output/current/analysis/divergence_report.json
    Diff File:     output/current/analysis/first_divergence_diff.txt
    Mapping Info:  output/current/analysis/pass_mapping_used.json
